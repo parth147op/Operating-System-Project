@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semaphores</title>
+    <link rel="stylesheet" href="bankers_algorithm_info.css" />
+    <link rel="icon" href="images/logo1.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/61820eb66c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Deadlock And Concurrency</a>
+      <div class="toggle" onclick="toggleMenu();"></div>
+      <ul class="menu">
+        <li><a href="#page_top" onclick="toggleMenu();">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu();">About</a></li>
+        <li><a href="index.html" onclick="toggleMenu();">Algorithms</a></li>
+      </ul>
+    </header>
+
+    <section class="info" id="page_top">
+      <h1>Semaphores</h1>
+      <h2>Introduction:</h2>
+      <p>
+        In computer science, a semaphore is a variable or abstract data type used to control access to a common resource by multiple threads and avoid critical section problems in a concurrent system such as a multitasking operating system. Semaphores are a type of synchronization primitives. A trivial semaphore is a plain variable that is changed (for example, incremented or decremented, or toggled) depending on programmer-defined conditions.Semaphores are a useful tool in the prevention of race conditions; however, their use is by no means a guarantee that a program is free from these problems. Semaphores which allow an arbitrary resource count are called counting semaphores, while semaphores which are restricted to the values 0 and 1 (or locked/unlocked, unavailable/available) are called binary semaphores and are used to implement locks.
+      </p>
+
+      <h2>Types of Semaphores:</h2>
+      <ul>
+        <h3 style="color: aliceblue;">Counting Semaphores:</h3>
+        <li>
+            Semaphores are a useful tool in the prevention of race conditions; however, their use is by no means a guarante that a program is free from these problems. Semaphores which allow an arbitrary resource count are called counting semaphores.
+        </li>
+        <a href="./Semaphores/counting_semaphore.html"><button class="btn">Demo</button></a>
+        <h3 style="color: aliceblue;">Binary Semaphores:</h3>
+        <li>
+            While semaphores which are restricted to the values 0 and 1 (or locked/unlocked, unavailable/available) are called binary semaphores and are used to implement locks.
+        </li>
+        <a href="./Semaphores/binary_semaphore.html"><button class="btn">Demo</button></a>
+      </ul>
+    </section>
+    
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var menu = document.querySelector(".menu");
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

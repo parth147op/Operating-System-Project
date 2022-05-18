@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>Peterson's Algorithm</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </head>
+    <style>
+        .input-output{
+        background-color: #273746;
+        height:1700px;
+    }
+    .heading{
+        color:aliceblue;
+        padding: 50px;
+        letter-spacing: 0.3em;
+        padding-top:130px;
+    }
+    .resetbttn button{
+        background-color: aliceblue;
+        margin-left: 600px;
+        margin-top:30px;
+        padding: 10px;
+        font-size: 20px;
+        color:#273746;
+        border-radius: 10px;
+        letter-spacing: 0.1em;
+    }
+    .resetbttn button:hover{
+        background-color:#273746;
+        color:aliceblue;
+        transition: 1s;
+        border:2px solid  aliceblue;
+    }
+    .flags{
+        margin-left:600px;
+        font-size:20px;
+        margin-top:30px;
+        color:aliceblue;
+    }
+    .entrystate{
+        margin-left:600px;
+        font-size:20px;
+        margin-top:30px;
+        color:aliceblue;
+    }
+    #entrystate,#entry{
+        display:flex;
+        /* margin-left:600px;
+        margin-top:30px; */
+        margin-left: 300px;
+        margin-right:300px;
+    }
+    #entry button{
+        font-size:20px;
+        color:#273746;
+        flex:1;
+        border: 2px solid aliceblue;
+        padding: 10px;
+    }
+    #entry button:hover{
+        background-color: aliceblue;
+        border: 2px solid #273746;
+        color:#273746;
+        transition: 1s;
+    }
+    </style>
+    <body>
+                  <!--submit-->
+        <div class="input-output">
+            <h1 class="heading" style="">Peterson's Method</h1>
+            <div class="resetbttn">
+                <a href="peterson_meth.html"><button>
+                    Reset   
+                </button></a>
+            </div>
+            
+            <div class="flags" id = 'turn_state'>
+                <div id="flag1">Flag1: 0</div>
+                <div id="flag2">Flag2: 0</div>
+            </div>
+            <div class="entrystate">
+                <div id="entry_head">Entry state: </div>
+            </div>
+            <div id="entry">
+                <button id = '1' onclick="critical_state(this.id)">P1</button>
+                <button id = '2' onclick="critical_state(this.id)">P2</button>
+            </div>
+            <div class="entrystate">
+                <div id="entry_head">Critical state: </div>
+                <div id="critical"></div>
+            </div>
+            <div class="entrystate">
+                <div id="entry_head">Exit State: </div>
+                <div id="exit"></div>
+            </div>
+        </div>
+        
+             
+            
+        <!--table-->
+        <div id = 'turn_state'></div>
+        <div id="flag1"><i class="fas fa-flag mr-2"></i>Flag1: 0</div>
+        <div id="flag2"><i class="fas fa-flag mr-2"></i>Flag2: 0</div>
+    
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="peterson.js"></script>
+    </body>
+</html>

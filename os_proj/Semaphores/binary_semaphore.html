@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Binary semaphore</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <style>
+        button{
+            cursor: pointer;
+        }
+        body{
+            color: aliceblue;
+        }
+        .div{
+            height:1400px;
+            background-color: #273746;
+        }
+        .heading{
+        color:aliceblue;
+        padding-top: 100px;
+        padding-left:100px;
+        padding-bottom:50px;
+        letter-spacing: 0.3em;
+        }
+        .process_input{
+            padding-left:100px;
+            color:aliceblue;
+            padding-left:50px;
+            letter-spacing: 0.1em;
+            margin-bottom: 30px;
+        }
+        .process_input input{
+            width: 400px;
+        border-radius: 30px;
+        padding:5px;
+        border:2px solid  aliceblue;
+        background-color: #273746;
+        }
+        .process_input input:hover{
+        background-color: aliceblue;
+        color:#273746;
+        transition: 1s;
+    }
+    .div button{
+        background-color: aliceblue;
+        margin-left: 50px;
+        margin-top:20px;
+        padding: 7px;
+        color:#273746;
+        border-radius: 10px;
+        letter-spacing: 0.1em;
+
+    }
+    .border-white{
+        border: solid 1px white;
+        margin-left:50px;
+        margin-right:50px;
+        padding:40px;
+        margin-top:50px;
+    }
+    .lockstate{
+        margin-left:400px;
+    }
+    </style>
+    <body>
+
+        <div class="div">
+            <h1 class="heading">Binary Semaphores</h1>
+            <div class="process_input" id='process_input'>
+                <label for="process">No. of Process:</label>
+                <input type="number" id="process" placeholder="enter the number of process">
+            </div>
+            <button type="button" onclick = "lockvari()"> Submit</button>
+            <div class="lockstate" id = 'lock_state'></div>
+            <section class='border-white'>
+                <div id = 'added_head'>Added state:</div>
+                <div  id='added'></div>
+            </section>
+            <section class='border-white'>
+                <div id = 'entry_head'>Entry state:</div>
+                <div  id='entry'></div>
+            </section>
+            <section class='border-white'>
+                <div id = 'cs_head'>Cs State:</div>
+                <div  id='cs'></div>
+            </section>
+            <section class='border-white'>
+                <div id = 'exit_head'>Exit State:</div>
+                <div  id='exit'></div>
+            </section>
+        </div>
+        <script src="binary_semaphore.js"></script>
+    </body>
+</html>

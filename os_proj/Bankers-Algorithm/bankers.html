@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>Banker's Algorithm</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    </head>
+    <style>
+    .margin{
+        margin:60px;
+    }
+    .inputoutput{
+        display:flex;
+    }
+    .bankers-inputs{
+        background-color: 273746;
+        height:1100px;
+        flex:1;
+    }
+    .heading{
+        color:aliceblue;
+        padding: 50px;
+        letter-spacing: 0.3em;
+    }
+    .noofprocess{
+        color:aliceblue;
+        padding-left:50px;
+        letter-spacing: 0.1em;
+        margin-bottom: 30px;
+    }
+    .noofprocess input{
+        width: 400px;
+        border-radius: 30px;
+        padding:5px;
+        border:2px solid  aliceblue;
+        background-color: #273746;
+    }
+    .noofprocess input:hover{
+        background-color: aliceblue;
+        color:#273746;
+        transition: 1s;
+    }
+    .maxneed{
+        color:aliceblue;
+        padding-left:50px;
+        padding-top:30px;
+        letter-spacing: 0.1em;
+        margin-bottom: 30px;
+    }
+    .maxneed textarea{
+        width: 400px;
+        height: 200px;
+        border-radius: 20px;
+        padding:8px;
+        border:2px solid  aliceblue;
+        background-color: #273746;
+    }
+    .maxneed textarea:hover{
+        background-color: aliceblue;
+        color:#273746;
+        transition: 1s;
+    }
+    .bankers-output{
+        background-color: aliceblue;
+        color:#273746;
+        flex:1;
+        margin:10px;
+    }
+    .heading1{
+        color:#273746;
+        padding: 50px;
+        letter-spacing: 0.3em;
+    }
+    .bankers-inputs button{
+        background-color: aliceblue;
+        margin-left: 50px;
+        margin-top:30px;
+        padding: 7px;
+        color:#273746;
+        border-radius: 10px;
+        letter-spacing: 0.1em;
+    }
+
+    .bankers-inputs button:hover{
+        background-color:#273746;
+        color:aliceblue;
+        transition: 1s;
+        border:2px solid  aliceblue;
+    }
+    </style>
+    <body>
+        <div class="inputoutput">
+            
+            <div class="bankers-inputs">
+            
+                <h2 class="heading">BANKERS Algorithm</h2>
+                <div class="noofprocess">
+                    <label for="process">No. of Process :</label>
+                    <input type="text" id="process" placeholder="enter the number of the process">
+                </div>
+                <div class="noofprocess">
+                    <label for="resource">No. of Resources:</label>
+                    <input type="text" id="resource" placeholder="enter space seperated number of Resources">
+                </div>
+                <div class="maxneed">
+                    <label for="max">Max Need:</label>
+                    <textarea type="text" id="max" placeholder="enter space seperated max need of resource of the particular process and enter the new process in new line"></textarea>
+                </div>
+                <div class="maxneed">
+                    <label for="allocated">Allocated:</label>
+                    <textarea type="text" id="allocated" placeholder="enter space seperated allocated Resources of the particular process and enter the new process in new line"></textarea>
+                </div>
+                <button onclick = "banker()">Submit</button>
+            </div>
+            <div class="bankers-output">
+                <h2 class="heading1">OUTPUT</h2>
+                
+                   
+                    <div class="contact100-form-title pt-3 pb-0" id = 'ans'></div>
+                    <div class="contact100-form-title pt-3 pb-0" id = 'needinfo'></div>
+                    <table class="table table-dark pt-3 pb-0" id='needtable'></table>
+                    <div class="contact100-form-title pt-3 pb-0" id = 'allocatedinfo'></div>
+                    <table class="table table-dark pt-3 pb-0" id='alloctedtable'></table>
+            </div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="banker.js"></script>
+    </body>
+</html>
+
+

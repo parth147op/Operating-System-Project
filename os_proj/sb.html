@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitor Method</title>
+    <link rel="stylesheet" href="monitor_solution_info.css" />
+    <link rel="icon" href="images/logo1.png" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/61820eb66c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Deadlock And Concurrency</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#page_top" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="index.html" onclick="toggleMenu();">Algorithms</a></li>
+        </ul>
+    </header>
+
+    <section class="info" id="page_top">
+        <h1>Monitors</h1>
+        <h2>Introduction:</h2>
+        <p>Monitors are used for process synchronization. With the help of programming languages, we can use a monitor to achieve mutual exclusion among the processes. In other words, monitors are defined as the construct of programming language, which helps in controlling shared data access. Monitors offer high-level of synchronization.
+
+        
+        <h2>Characteristics</h2>    
+        <ul>
+            <li>Inside the monitors, we can only execute one process at a time.</li>
+            <li>Monitors are the group of procedures, and condition variables that are merged together in a special type of class.</li>
+            <li>If the process is running outside the monitor, then it cannot access the monitor’s internal variable. But a process can call the procedures of the monitor.</li>
+            <li>Monitors were derived to simplify the complexity of synchronization problems.</li>
+            <li>There is only one process that can be active at a time inside the monitor.</li>
+        </ul>
+    
+
+
+        <h2>Advantages of Monitor</h2>
+       
+        <ul>
+            <li>Monitors have the advantage of making parallel programming easier and less error prone than using techniques such as semaphore.</li>
+        </ul>
+        
+        <h2>Monitor Solution For .......... Problem</h2>
+        <ul>
+            <li>
+            </li>
+        </ul>
+    </section>
+
+
+
+    <a href="/Monitor-Solution-Algorithm/monitor.html"><button class="btn">Demo</button></a>
+
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+        function toggleMenu() {
+            var menuToggle = document.querySelector(".toggle");
+            var menu = document.querySelector(".menu");
+            menuToggle.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
